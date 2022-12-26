@@ -1,0 +1,36 @@
+.Countdown {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+
+    .reset {
+        background-color: #cc0f19;
+        color: white;
+        padding: 10px 60px;
+        border: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .25s;
+
+        &:hover {
+            background-color: #9b1017;
+        }
+    }
+
+    .timer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 6px;
+        font-size: 2rem;
+
+        .time {
+            padding: 23px 10px;
+            background-color: #4C5780;
+            border-radius: 22px;
+        }
+    }
+
+
+}

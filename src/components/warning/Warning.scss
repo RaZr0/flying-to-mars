@@ -1,0 +1,29 @@
+@import '../../styles/breakpoints';
+
+.Warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 4rem;
+
+    @media screen and (max-width: $desktop) {
+      row-gap: 2rem;
+    }
+
+    @media screen and (max-width: $desktop) {
+      flex-direction: column;
+    }
+
+    .hero {
+      @media screen and (max-width: $desktop) {
+        width: 300px;
+      }
+  
+      @media screen and (min-width: $desktop) {
+        width: 200px;
+      }
+      
+    }
+
+  }

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Countdown from './components/countdown/Countdown';
+import useLocalStorage from "use-local-storage";
+import Logo from './components/logo/Logo';
+import Warning from './components/warning/Warning';
 
 function App() {
+  const [firstCountdown, setFirstCountdown] = useLocalStorage('firstCountdown', 5);
+  const [secondCoundown, setSecondCoundown] = useLocalStorage('secondCoundown', 4);
+  const [thirdCountdown, setThirdCountdown] = useLocalStorage('thirdCountdown', 3);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo />
+      <Warning />
+      <div className='counters'>
+        {<Countdown timerInSeconds={firstCountdown} onCountdownUpdate={setFirstCountdown} />}
+        {<Countdown timerInSeconds={secondCoundown} onCountdownUpdate={setSecondCoundown} />}
+        {<Countdown timerInSeconds={thirdCountdown} onCountdownUpdate={setThirdCountdown} />}
+      </div>
     </div>
   );
 }
