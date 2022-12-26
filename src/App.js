@@ -5,9 +5,9 @@ import Logo from './components/logo/Logo';
 import Warning from './components/warning/Warning';
 
 function App() {
-  const [firstCountdown, setFirstCountdown] = useLocalStorage('firstCountdown', 5);
-  const [secondCoundown, setSecondCoundown] = useLocalStorage('secondCoundown', 4);
-  const [thirdCountdown, setThirdCountdown] = useLocalStorage('thirdCountdown', 3);
+  const [firstCountdown, setFirstCountdown] = useLocalStorage('firstCountdown', 60);
+  const [secondCoundown, setSecondCoundown] = useLocalStorage('secondCoundown', 120);
+  const [thirdCountdown, setThirdCountdown] = useLocalStorage('thirdCountdown', 180);
 
 
   return (
